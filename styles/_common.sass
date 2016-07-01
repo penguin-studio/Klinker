@@ -1,0 +1,209 @@
+body
+  font-family: $font-base
+  font-size: $font-size-base
+  color: $color-text-base
+  height: 100%
+  background: url('../images/body_back_8.png') repeat fixed
+a
+  text-decoration: none
+textarea
+  resize: none
+
+/*------HEADER------*/
+
+.kl-header
+  background: #fff
+  @include box-shadow(0 10px 24px -4px rgba(0, 0, 0, 0.41))
+  margin-bottom: 60px
+  .container
+    +clearfix
+
+.bot-block
+  width: 274px
+  height: 40px
+  background: red
+
+.kl-header-menu_left
+  float: left
+  width: 38%
+  ul
+    +clearfix
+    margin-left: 20%
+  li
+    float: left
+    margin: 0 5%
+    line-height: 71px
+    a
+      font-size: 16px
+      text-decoration: underline
+      color: #333
+      padding: 6px 8px
+
+.kl-header-logo
+  overflow: hidden
+  width: 24%
+  text-align: center
+  height: 72px
+
+.kl-header-menu_right
+  float: right
+  width: 38%
+  margin-top: -72px
+  ul
+    +clearfix
+  li
+    float: left
+    line-height: 71px
+    margin: 0 2%
+    a
+      font-size: 16px
+      text-decoration: underline
+      color: #333
+      padding: 6px 8px
+  .kl-header-menu_right__last_li
+    text-align: center
+    border: 3px solid #BE7C33
+    @include border-radius(5px)
+    padding: 5px
+    height: 50px
+    margin-top: 10px
+    span
+      display: block
+      line-height: 14px
+      padding-bottom: 4px;
+    a
+      display: block
+      padding: 0
+      font-size: 12px
+      line-height: 12px
+
+
+/*------/HEADER------*/
+
+/*------Section Slider------*/
+
+.kl-slider
+  height: 350px
+  background: #fff
+  .slider-item
+    background: yellow
+    height: 350px
+    position: relative
+    .slider-item-title
+      height: 100px
+      width: 100%
+      background: rgba(255,255,255,0.8)
+      position: absolute
+      top: 200px
+      font-size: 26px
+      line-height: 30px
+      font-family: Arial
+      color: #333
+      text-transform: uppercase
+      text-align: center
+      padding: 20px 20%
+
+/*------/Section Slider------*/
+
+/*------Section Categories------*/
+
+.flex-wrapp
+  @include flexbox
+  flex-wrap: wrap
+  padding: 20px 0
+  .kl-block:first-child .kl-block__img
+    margin-top: 12%
+
+.kl-block
+  flex: 1
+  text-align: center
+  min-height: 166px
+.kl-block__title
+  display: block
+  font-size: 16px
+  line-height: 18px
+  color: #9C5033
+  text-decoration: underline
+  &:hover
+    color: #333
+.kl-block:hover
+  @include border-radius(5px)
+  @include box-shadow(0px 0px 8px -2px #000000)
+.kl-block__link
+  display: block
+  height: 100%
+  padding: 20px
+
+
+/*------/Section Categories------*/
+
+/*------Section Text------*/
+
+.kl-text-block1
+  flex: 1
+  padding-right: 60px
+.kl-text-block2
+  flex: 1
+  padding-left: 60px
+.kl-text-block__text
+  font-size: 13px
+  line-height: 20px
+  text-align: justify
+
+/*------/Section Text------*/
+
+/*------Footer------*/
+
+.kl-footer .flex-wrapp
+  border-top: 2px dotted #ccc
+  border-bottom: 2px dotted #ccc
+.kl-footer-block1
+  flex: 1
+  padding-right: 60px
+  border-right: 2px dotted #ccc
+.kl-footer-block2
+  flex: 1
+  padding-left: 60px
+.kl-footer-block__title
+  font-size: 18px
+  line-height: 20px
+  text-transform: uppercase
+  text-decoration: underline
+  margin-bottom: 20px
+  font-weight: 400
+  a
+    color: #9C5033
+
+.kl-bot-footer-links
+  text-align: center
+  margin: 20px 0
+  li
+    display: inline-block
+    a
+      font-size: 13px
+      line-height: 22px
+      color: #85807a
+      text-decoration: underline
+      padding: 4px 7px
+      &:hover
+        color: #333
+
+.kl-bot-footer-block
+  +clearfix
+  margin: 30px 0
+  .kl-bot-footer-block-left
+    float: left
+    color: #959593
+    .kl-bot-footer-block-left__copy
+      font-style: italic
+      margin-right: 10px
+    .kl-bot-footer-block-left__soc
+      color: #333
+      font-style: italic
+      margin-right: 10px
+  .kl-bot-footer-block-right
+    float: right
+    font-style: italic;
+    color: #959593;
+
+/*------/Footer------*/
