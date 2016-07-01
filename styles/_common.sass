@@ -13,10 +13,12 @@ textarea
 
 .kl-header
   background: #fff
-  @include box-shadow(0 10px 24px -4px rgba(0, 0, 0, 0.41))
+  @include box-shadow(0 10px 10px -4px rgba(0, 0, 0, 0.41))
   margin-bottom: 60px
   .container
     +clearfix
+    position: relative
+    z-index: 1
 
 .bot-block
   width: 274px
@@ -29,15 +31,18 @@ textarea
   ul
     +clearfix
     margin-left: 20%
-  li
+  .kl-header-menu_left__li
     float: left
     margin: 0 5%
     line-height: 71px
-    a
-      font-size: 16px
-      text-decoration: underline
-      color: #333
-      padding: 6px 8px
+  .kl-header-menu_left__li > a
+    font-size: 16px
+    text-decoration: underline
+    color: #333
+    padding: 6px 8px
+  .kl-header-menu_left__li:hover > a
+    @include box-shadow(0px 0px 10px -1px #000000)
+    @include border-radius(5px)
 
 .kl-header-logo
   overflow: hidden
@@ -60,6 +65,9 @@ textarea
       text-decoration: underline
       color: #333
       padding: 6px 8px
+  li:hover > a
+    @include box-shadow(0px 0px 10px -1px #000000)
+    @include border-radius(5px)
   .kl-header-menu_right__last_li
     text-align: center
     border: 3px solid #BE7C33
@@ -76,21 +84,52 @@ textarea
       padding: 0
       font-size: 12px
       line-height: 12px
+.oval
+  width: 300px;
+  height: 70px;
+  background: #fff;
+  -webkit-border-radius: 100px / 50px;
+  -moz-border-radius: 100px / 50px;
+  border-radius: 150px / 35px;
+  position: absolute;
+  top: 31px;
+  left: 50%
+  margin-left: -152px
+  z-index: -1
+  @include box-shadow(0 10px 10px -4px rgba(0, 0, 0, 0.41))
 
-
+.drop-menu
+  position: absolute
+  left: -20px
+  top: 50px
+  width: 220px
+  border: 1px solid #ccc
+  display: none
+  li
+    line-height: 14px
+    background: #fff
+    border-bottom: 1px solid #ccc
+    a
+      font-size: 13px
+      display: block
+      padding: 10px
+      text-decoration: none
+      color: #333
+      &:hover
+        background: #9C5033
+        color: #fff
+.drop-link:hover .drop-menu
+  display: block
 /*------/HEADER------*/
 
 /*------Section Slider------*/
 
 .kl-slider
-  height: 350px
-  background: #fff
   .slider-item
-    background: yellow
     height: 350px
     position: relative
     .slider-item-title
-      height: 100px
+      height: 94px
       width: 100%
       background: rgba(255,255,255,0.8)
       position: absolute
@@ -103,6 +142,54 @@ textarea
       text-align: center
       padding: 20px 20%
 
+.back-img1
+  background: url('../images/slider-bg-img1.jpg') no-repeat center
+.back-img2
+  background: url('../images/slider-bg-img2.jpg') no-repeat center
+.back-img3
+  background: url('../images/slider-bg-img3.png') no-repeat center
+.back-img4
+  background: url('../images/slider-bg-img4.jpg') no-repeat center
+.back-img5
+  background: url('../images/slider-bg-img5.jpg') no-repeat center
+.back-img6
+  background: url('../images/slider-bg-img6.jpg') no-repeat center
+.back-img7
+  background: url('../images/slider-bg-img7.png') no-repeat center
+.back-img8
+  background: url('../images/slider-bg-img8.png') no-repeat center
+
+.lSSlideOuter .lSPager.lSpg > li a
+  @include border-radius(0)
+  width: 25px
+  height: 25px
+  background: transparent
+  border: 1px solid #fe8008
+.lSSlideOuter .lSPager.lSpg > li:hover a
+  background: #fe8008
+.lSSlideOuter .lSPager.lSpg > li.active a
+  background: #fe8008
+.lSSlideOuter
+  position: relative
+.lSSlideOuter .lSPager.lSpg
+  margin-top: 0
+  position: absolute
+  bottom: 10px
+  left: 50%
+  margin-left: -140px
+
+.lSAction > a
+  width: 35px
+  height: 58px
+  top: 67%
+.lSAction > a.lSPrev
+  background: url('../images/controls_2.png') no-repeat 0 -58px
+  &:hover
+    background-position: 0 0
+.lSAction > a.lSNext
+  background: url('../images/controls_2.png') no-repeat -35px -58px
+  &:hover
+    background-position: -35px 0
 /*------/Section Slider------*/
 
 /*------Section Categories------*/
